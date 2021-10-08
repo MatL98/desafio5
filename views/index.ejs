@@ -1,0 +1,39 @@
+<html lang="en">
+  <%-include("templates/head",{})%>
+  <body>
+    <div class="container">
+      <h1>Carga tus productos</h1>
+      <form action="/" method="post">
+        <div class="mb-3">
+          <label class="form-label">Producto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="title"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="price"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Imagen</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="thumbnail"
+          />
+        </div>
+        <button type="submit" class="btn btn-secondary">Cargar</button>
+        <a href="http://localhost:8080/products">Ver productos</a>
+      </form>
+    </div>
+  </body>
+</html>
