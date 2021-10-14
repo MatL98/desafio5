@@ -23,9 +23,7 @@
       <h1>Productos</h1>
       <a href="http://localhost:8080/">Cargar mas productos</a>
     </div>
-    <% if(data.lenght > 1){ %>
-    <h2>No hay productos</h2>
-    <% }else {%>
+    {{#if data }}
     <div class="container">
       <table class="table">
         <thead>
@@ -36,15 +34,20 @@
           </tr>
         </thead>
         <tbody>
-            #each data #
+          {{#each data}}
           <tr>
-            <td><%=pr.title%></td>
-            <td><%=pr.price%></td>
-            <td><img class="image" src=<%=pr.thumbnail %> /></td>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td><img class="image" src= "{{this.thumbnail}}"/></td>
           </tr>
+          {{/each}}
         </tbody>
       </table>
     </div>
-    <% } %>
+    {{else}}
+    <div class="container">
+      <h2>No hay productos</h2>
+    </div>
+    {{/if}}
   </body>
 </html>
