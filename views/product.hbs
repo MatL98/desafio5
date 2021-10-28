@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <h1>Productos</h1>
-      <a href="http://localhost:8080/">Cargar mas productos</a>
+      <a href="http://localhost:8080/form">Cargar mas productos</a>
     </div>
     {{#if data }}
     <div class="container">
@@ -36,7 +36,7 @@
         <tbody>
           {{#each data}}
           <tr>
-            <td>{{this.title}}</td>
+            <td>{{this.nameOfProducts}}</td>
             <td>{{this.price}}</td>
             <td><img class="image" src= "{{this.thumbnail}}"/></td>
           </tr>
